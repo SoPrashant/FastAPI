@@ -1,0 +1,16 @@
+python 3.12
+fastapi
+sqlalchemy
+passlib
+"python-jose[cryptography]"
+uvicorn
+python-multipart
+bcrypt 4.0.1
+postgresql
+pgadmin
+psycopg2-binary
+pymysql
+pytest
+httpx
+pytest-asyncio
+"pydantic[email]"

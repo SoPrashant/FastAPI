@@ -1,0 +1,7 @@
+FAST API Request mehods
+uvicorn / swagger ui
+validation handling (path and query parameter) with the variables
+error handling
+
+SQL database - ORM
+
