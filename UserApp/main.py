@@ -89,7 +89,7 @@ async def update_user(db : db_dependency, user_request: UserRequest, user_id : i
 async def delete_user(db: db_dependency, user_id: int= Path(gt=0)):
     user_model = db.query(Users).filter(Users.id == user_id).first()
     if user_model is None:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail="User not found.")
 
     db.query(Users).filter(Users.id == user_id).delete()
     db.commit()

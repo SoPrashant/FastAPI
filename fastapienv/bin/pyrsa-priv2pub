@@ -1,4 +1,4 @@
-#!/Users/prashantsharma/Documents/studyDocs/fastapi_udemy/fastapi/fastapienv/bin/python3.12
+#!/Users/prashantsharma/Documents/studyDocs/fastapi_udemy/fastapi/fastapienv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

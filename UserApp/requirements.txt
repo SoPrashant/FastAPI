@@ -1,4 +1,4 @@
-python 3.12
+#python 3.12
 fastapi
 sqlalchemy
 passlib
@@ -13,4 +13,4 @@ pymysql
 pytest
 httpx
 pytest-asyncio
-"pydantic[email]"
+
