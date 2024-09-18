@@ -5,7 +5,7 @@ passlib
 "python-jose[cryptography]"
 uvicorn
 python-multipart
-bcrypt 4.0.1
+bcryp==4.0.1
 postgresql
 pgadmin
 psycopg2-binary
