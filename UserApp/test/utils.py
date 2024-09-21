@@ -8,18 +8,20 @@ from UserApp.main import app
 from UserApp.models import Users
 
 
-SQLALCHEMY_DATABASE_URL = 'sqlite:///./testuserdb.db'
+SQLALCHEMY_DATABASE_URL = "sqlite:///./testuserdb.db"
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False},
-                       poolclass=StaticPool,
-                       )
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL,
+    connect_args={"check_same_thread": False},
+    poolclass=StaticPool,
+)
 
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base.metadata.create_all(bind=engine)
 
 
-def override_get_db():   # open a connection when client wnat to fetch the data and then close the same later
+def override_get_db():  # open a connection when client wnat to fetch the data and then close the same later
     db = TestingSessionLocal()
     try:
         yield db
@@ -28,6 +30,7 @@ def override_get_db():   # open a connection when client wnat to fetch the data 
 
 
 client = TestClient(app)
+
 
 @pytest.fixture
 def test_user():
@@ -44,4 +47,3 @@ def test_user():
     with engine.connect() as connection:
         connection.execute(text("DELETE FROM users;"))
         connection.commit()
-
